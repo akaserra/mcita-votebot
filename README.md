@@ -14,7 +14,7 @@ Un grande grazie a tutti coloro che sono intenzionati ad aiutarmi col progetto �
 
 ## 📖 Wiki
 
-[Clicca qua](https://minecraft-italia.net/lista/server/tempestmc) per visionare la Wiki di questo progetto.
+[Clicca qua](https://github.com/akaserra/mcita-votebot/wiki) per visionare la Wiki di questo progetto.
 
 ## 💼 Server
 Ecco qua tutti i Server che attualmente utilizzano questo Bot:
