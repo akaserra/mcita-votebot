@@ -22,7 +22,7 @@ STAFFER_FILE = 'staffer.yaml'
 
 REMINDER_TIME = time(hour=8, minute=16)
 
-REMINDER_MESSAGE = "```Ecco gli username che non hanno votato:\n"
+REMINDER_MESSAGE = "```Ecco gli staffers che non hanno votato:\n"
 
 API_URL = f'https://minecraft-italia.net/lista/api/vote/server?serverId={SERVER_ID}'
 
@@ -79,7 +79,7 @@ async def controllo_auto():
                         tutti_hanno_votato = False
                         for channel_id in CHANNEL_IDS:
                             channel = client.get_channel(channel_id)
-                            message = await channel.send("Non ci sono ancora staffer registrati al controllo!!!")
+                            message = await channel.send("Non ci sono ancora staffers registrati al controllo!!!")
                         break
                     if username not in voted_usernames:
                         tutti_hanno_votato = False
@@ -93,7 +93,7 @@ async def controllo_auto():
                 if tutti_hanno_votato:
                     for channel_id in CHANNEL_IDS:
                         channel = client.get_channel(channel_id)
-                        await channel.send("Tutti gli staffer registrati al controllo hanno votato!!!")
+                        await channel.send("Tutti gli staffers registrati al controllo hanno votato!!!")
                 else:
                     try:
                         for channel_id in CHANNEL_IDS:
@@ -116,7 +116,7 @@ async def controllo_auto():
 @client.event
 async def on_ready():
     print(f'{client.user} è online!')
-    await client.change_presence(activity=discord.Game(name="play.tempestmc.it"))
+    await client.change_presence(activity=discord.Game(name="akaserra/mcita-votebot"))
     while True:
         await controllo_auto()
 
