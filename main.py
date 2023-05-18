@@ -10,11 +10,11 @@ import asyncio
 from datetime import datetime, time, timedelta
 import yaml
 
-TOKEN = 'OTA1MTU1NDI3NjY1MzQyNTA1.GsJivv.DIy4twLqZrgkFQkf-zvYrObj8eikCuU3vmw5Zg'
+TOKEN = ''
 
-SERVER_ID = '41'
+SERVER_ID = ''
 
-CHANNEL_IDS = [1013438897608466432]
+CHANNEL_IDS = [] # in integrale
 
 USERNAME_FILE = 'non_votanti.json'
 
