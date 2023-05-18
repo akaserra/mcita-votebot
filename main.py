@@ -188,6 +188,18 @@ async def staffers(ctx):
 
 
 @client.command()
+async def about(ctx):
+    embed = discord.Embed(title="mcita-votebot", url="https://github.com/akaserra/mcita-votebot",
+                          description="Bot Discord sviluppato da akarta#8573", color=0x4b8e3e)
+    embed.set_author(name="akarta", url="https://t.me/TrialHelper",
+                     icon_url="https://avatars.githubusercontent.com/u/105589680?v=4")
+    embed.add_field(name="WIKI", value="Controlla la wiki del bot qua https://github.com/akaserra/mcita-votebot/wiki",
+                    inline=True)
+    embed.set_footer(text="https://github.com/akaserra/mcita-votebot")
+    await ctx.send(embed=embed)
+
+
+@client.command()
 @commands.has_any_role("Head Staff", "Owner")
 async def controllo(ctx):
     response = requests.get(API_URL)
